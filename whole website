@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — Spiral Academy | Spiral Group</title>
+<meta name="description" content="Register for a Zoho Books course at Spiral Academy, Tanzania's first certified Zoho academy.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+
+<section class="academy-reg-banner">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <a href="spiral-academy.html">Spiral Academy</a> <span>/</span> <span>Register</span></div>
+    <img src="images/brand/spiral-academy-logo.png" alt="Spiral Academy" style="height:62px;width:auto;margin:6px 0 18px">
+    <h1>Sign Up Now</h1>
+    <p>Secure your place on an upcoming Zoho Books course at Tanzania's first certified Zoho academy.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:44px">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <form id="academy-form" class="form-grid" action="https://formsubmit.co/info@spiral.co.tz" method="POST">
+          <input type="hidden" name="_subject" value="New Spiral Academy registration">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" value="https://spiral.co.tz/academy-register.html?sent=1">
+          <div class="form-group"><label for="ac-name">Full name *</label><input type="text" id="ac-name" name="name" required placeholder="Muhammad Ali"></div>
+          <div class="form-group"><label for="ac-company">Company name</label><input type="text" id="ac-company" name="company" placeholder="ABC Limited"></div>
+          <div class="form-group"><label for="ac-email">Email address *</label><input type="email" id="ac-email" name="email" required placeholder="muhammad@acme.co.tz"></div>
+          <div class="form-group"><label for="ac-phone">Phone number</label><input type="tel" id="ac-phone" name="phone" placeholder="+255 7XX XXX XXX"></div>
+          <div class="form-group full">
+            <label for="ac-course">Which course interests you?</label>
+            <select id="ac-course" name="course">
+              <option value="">Select a course</option>
+              <option>Zoho Books Beginner</option>
+              <option>Zoho Books Advanced</option>
+            </select>
+          </div>
+          <div class="form-group full"><label for="ac-message">Anything else we should know?</label><textarea id="ac-message" name="message" placeholder="Your current role, experience level, or what you're hoping to get out of the course."></textarea></div>
+          <input type="hidden" name="payment_method" id="ac-payment-method" value="">
+          <div class="form-group full"><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:16px">Complete my registration</button></div>
+        </form>
+
+        <div id="academy-payment" style="display:none">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+            <button type="button" id="pay-back" style="border:0;background:transparent;padding:0;cursor:pointer;font:inherit;font-size:13.5px;font-weight:700;color:var(--blue)">&larr; Edit details</button>
+            <span style="font-size:13.5px;color:var(--text-lighter)">Step 2 of 2</span>
+          </div>
+          <h3 style="font-size:clamp(1.5rem,2.6vw,2rem)">Payment</h3>
+          <p style="margin-top:8px;margin-bottom:22px">Your place is held once payment is received.</p>
+
+          <div style="padding:24px;background:var(--gray100);border-radius:var(--radius-lg);margin-bottom:24px">
+            <div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Your registration</div>
+            <div style="display:grid;gap:10px;margin-top:14px">
+              <div style="display:flex;justify-content:space-between;gap:16px;font-size:14.5px"><span style="color:var(--text-light)">Name</span><span style="font-weight:700;text-align:right" id="sum-name">&mdash;</span></div>
+              <div style="display:flex;justify-content:space-between;gap:16px;font-size:14.5px"><span style="color:var(--text-light)">Course</span><span style="font-weight:700;text-align:right" id="sum-course">&mdash;</span></div>
+              <div style="display:flex;justify-content:space-between;gap:16px;font-size:14.5px"><span style="color:var(--text-light)">Starts</span><span style="font-weight:700;text-align:right">14th September &bull; 2 weeks</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;padding-top:18px;border-top:1px solid var(--gray300)">
+              <span style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Course fee</span>
+              <span style="font-size:1.5rem;font-weight:800;color:var(--crimson)">TZS [amount]</span>
+            </div>
+          </div>
+
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter);margin-bottom:12px">Payment method</div>
+          <div id="pay-methods" style="display:grid;gap:12px">
+            <label class="pay-option"><input type="radio" name="paymethod" value="Mobile money (Selcom)" checked><span><span class="po-title">Mobile money &mdash; Selcom</span><span class="po-note">Lipa namba [number] &bull; Registered name [name]</span></span></label>
+          </div>
+
+          <button type="button" id="pay-confirm" class="btn btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:16px;margin-top:24px">Confirm registration</button>
+        </div>
+        <div id="academy-success" style="display:none;padding:36px;background:rgba(70,148,49,0.06);border-radius:var(--radius-lg);text-align:center;margin-top:20px">
+          <div style="font-size:36px;margin-bottom:12px">&#10003;</div>
+          <h3>Registration received</h3>
+          <p style="margin-top:8px">Thank you &mdash; a confirmation email is on its way with your payment details and joining instructions.</p>
+        </div>
+      </div>
+      <div>
+        <div style="padding:32px;background:var(--gray100);border-radius:var(--radius-lg)">
+          <h3>Upcoming course</h3>
+          <div style="margin-top:18px;display:grid;gap:14px">
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(192,65,76,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--crimson);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l3 1.5"></path></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Start date</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">14th September</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(74,92,141,0.1)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--mid);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M4 12h16"></path><path d="M4 8v8M20 8v8"></path></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Course duration</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">2 weeks</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(192,65,76,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--crimson);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Dates</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">Monday, Wednesday, Friday</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(34,110,181,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--blue);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Timing</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">9am &ndash; 11am</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(70,148,49,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--green);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Location</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">4th Floor Hekima Point, Mindu Street</div></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:24px;padding:24px;background:var(--gray100);border-radius:var(--radius-lg);display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+          <img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner" style="height:46px;width:auto">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700"><img src="images/zoho/books.png" alt="Zoho Books" style="height:26px;width:auto"> Zoho Books certified training</div>
+        </div>
+        <div style="margin-top:24px;padding:24px;background:var(--gray100);border-radius:var(--radius-lg)">
+          <h4>About the academy</h4>
+          <p style="margin-top:8px;font-size:14px">Official Zoho certification, purpose built facilities, and trainers with more than 30 years combined experience in the accounting field.</p>
+          <a href="spiral-academy.html" style="display:inline-block;margin-top:12px;color:var(--blue);font-weight:700;font-size:14px">&larr; Back to Spiral Academy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+if(new URLSearchParams(location.search).get('sent')==='1'){
+  document.getElementById('academy-form').style.display='none';
+  document.getElementById('academy-payment').style.display='none';
+  document.getElementById('academy-success').style.display='block';
+}
+// Two-step registration: details -> payment
+(function(){
+  const form = document.getElementById('academy-form');
+  const pay = document.getElementById('academy-payment');
+  if(!form || !pay) return;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    document.getElementById('sum-name').textContent = form.name.value || '—';
+    document.getElementById('sum-course').textContent = form.course.value || 'To be advised';
+    form.style.display = 'none';
+    pay.style.display = 'block';
+    window.scrollTo({ top: pay.getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' });
+  });
+  document.getElementById('pay-back').addEventListener('click', () => {
+    pay.style.display = 'none';
+    form.style.display = '';
+    window.scrollTo({ top: form.getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' });
+  });
+  document.getElementById('pay-confirm').addEventListener('click', () => {
+    const picked = pay.querySelector('input[name="paymethod"]:checked');
+    document.getElementById('ac-payment-method').value = picked ? picked.value : '';
+    form.submit();
+  });
+})();
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accounting, Audit Support & Financial Consultancy | Spiral Group</title>
+<meta name="description" content="Professional accounting services, review and audit support, and strategic financial consultancy for Tanzanian businesses from Spiral Group Limited.">
+<meta name="keywords" content="Zoho partner Tanzania, Zoho Books, Zoho CRM, accounting software Dar es Salaam, tax advisory Tanzania, business registration Tanzania, Zoho implementation East Africa">
+<meta name="author" content="Spiral Group Limited">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rfftg.vercel.app/accounting.html">
+<meta property="og:title" content="Accounting, Audit Support & Financial Consultancy | Spiral Group">
+<meta property="og:description" content="Professional accounting services, review and audit support, and strategic financial consultancy for Tanzanian businesses from Spiral Group Limited.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rfftg.vercel.app/accounting.html">
+<meta property="og:site_name" content="Spiral Group Limited">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accounting, Audit Support & Financial Consultancy | Spiral Group">
+<meta name="twitter:description" content="Professional accounting services, review and audit support, and strategic financial consultancy for Tanzanian businesses from Spiral Group Limited.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Spiral Group Limited", "url": "https://rfftg.vercel.app", "logo": "https://rfftg.vercel.app/images/brand/spiral-lockup-color.png", "description": "Authorized Zoho Partner in Tanzania specializing in accounting, tax advisory, Zoho implementation and business consulting.", "address": {"@type": "PostalAddress", "addressLocality": "Dar es Salaam", "addressCountry": "TZ"}, "sameAs": ["https://www.linkedin.com/company/spiralgrouplimited"]}</script>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions" class="active">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+<section class="section"><div class="container">
+  <a class="back-btn" href="index.html">Back to Home</a>
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Accounting & Financial Consultancy</span></div>
+    <span class="badge badge-crimson">Core service</span>
+    <h1 style="margin-top:12px">Accounting, review, audit support &amp; financial consultancy</h1>
+    <p>We help businesses build strong financial foundations — from day-to-day bookkeeping to strategic financial advisory and audit readiness.</p>
+  </div>
+  <div class="two-col" style="margin-top:48px">
+    <div class="prose">
+      <h3>What we offer</h3>
+      <p>Our accounting practice brings together experienced professionals who understand the Tanzanian regulatory landscape, TRA compliance requirements, and the nuances of East African business.</p>
+      <div class="feature-list">
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>Full-cycle bookkeeping</h4><p>Chart of accounts setup, transaction recording, bank reconciliation, and monthly close processes.</p></div></div>
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>Review &amp; audit support</h4><p>Preparing working papers, schedules, and supporting documentation for external auditors. We liaise directly with audit firms on your behalf.</p></div></div>
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>Tax advisory &amp; compliance</h4><p>TRA compliance, VAT management, corporate tax planning, and filing support. We keep you compliant so you can focus on growth.</p></div></div>
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>Financial consultancy</h4><p>Cash flow forecasting, budgeting, financial modelling, and strategic advisory to help you make better business decisions.</p></div></div>
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>Management reporting</h4><p>Custom dashboards and reports that give leadership real-time visibility into financial performance.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="background:var(--gray100);border-radius:var(--radius-lg);padding:36px">
+        <h3>Zoho-powered finance</h3>
+        <p style="margin:12px 0 20px">All our accounting services are built on top of the Zoho ecosystem, giving you modern cloud-based tools.</p>
+        <div class="zoho-products">
+          <div class="zoho-product"><img src="images/zoho/books.png" alt="Zoho Books"> Books</div>
+          <div class="zoho-product"><img src="images/zoho/expense.png" alt="Zoho Expense"> Expense</div>
+          <div class="zoho-product"><img src="images/zoho/inventory.png" alt="Zoho Inventory"> Inventory</div>
+          <div class="zoho-product"><img src="images/zoho/analytics.png" alt="Zoho Analytics"> Analytics</div>
+        </div>
+      </div>
+      <div style="margin-top:24px;padding:36px;border:1.5px solid var(--gray300);border-radius:var(--radius-lg)">
+        <h4>Who this is for</h4>
+        <p style="margin-top:8px;font-size:14px">SMEs and growing businesses in Tanzania who need professional financial management without the overhead of a full-time CFO team. Ideal for companies transitioning from manual bookkeeping to modern cloud accounting.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:20px">Get a quote</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+// Close mobile menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Spiral Group — Get a Free Consultation | Dar es Salaam, Tanzania</title>
+<meta name="description" content="Contact Spiral Group for a free consultation on Zoho implementation, accounting services, and business consulting in Tanzania.">
+<meta name="keywords" content="Zoho partner Tanzania, Zoho Books, Zoho CRM, accounting software Dar es Salaam, tax advisory Tanzania, business registration Tanzania, Zoho implementation East Africa">
+<meta name="author" content="Spiral Group Limited">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rfftg.vercel.app/contact.html">
+<meta property="og:title" content="Contact Spiral Group — Get a Free Consultation | Dar es Salaam, Tanzania">
+<meta property="og:description" content="Contact Spiral Group for a free consultation on Zoho implementation, accounting services, and business consulting in Tanzania.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rfftg.vercel.app/contact.html">
+<meta property="og:site_name" content="Spiral Group Limited">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Spiral Group — Get a Free Consultation | Dar es Salaam, Tanzania">
+<meta name="twitter:description" content="Contact Spiral Group for a free consultation on Zoho implementation, accounting services, and business consulting in Tanzania.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Spiral Group Limited", "url": "https://rfftg.vercel.app", "logo": "https://rfftg.vercel.app/images/brand/spiral-lockup-color.png", "description": "Authorized Zoho Partner in Tanzania specializing in accounting, tax advisory, Zoho implementation and business consulting.", "address": {"@type": "PostalAddress", "addressLocality": "Dar es Salaam", "addressCountry": "TZ"}, "sameAs": ["https://www.linkedin.com/company/spiralgrouplimited"]}</script>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+<section class="section"><div class="container">
+  <a class="back-btn" href="index.html">Back to Home</a>
+  <div class="page-header">
+    <h1>Get in touch</h1>
+    <p>Ready to transform your business? Tell us about your needs and we'll get back to you within 24 hours.</p>
+  </div>
+  <div class="two-col" style="margin-top:48px">
+    <div>
+      <form id="contact-form" class="form-grid" action="https://formsubmit.co/info@spiral.co.tz" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from spiral.co.tz website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://spiral.co.tz/contact.html?sent=1">
+        <div class="form-group"><label for="name">Full name *</label><input type="text" id="name" name="name" required placeholder="Muhammad Ali"></div>
+        <div class="form-group"><label for="company">Company name</label><input type="text" id="company" name="company" placeholder="ABC Limited"></div>
+        <div class="form-group"><label for="email">Email address *</label><input type="email" id="email" name="email" required placeholder="muhammad@acme.co.tz"></div>
+        <div class="form-group"><label for="phone">Phone number</label><input type="tel" id="phone" name="phone" placeholder="+255 7XX XXX XXX"></div>
+        <div class="form-group full">
+          <label for="service">What are you interested in?</label>
+          <select id="service" name="service">
+            <option value="">Select a service...</option>
+            <option value="accounting">Accounting & Financial Consultancy</option>
+            <option value="finance-systems">Finance Systems Overhaul</option>
+            <option value="zoho-implementation">Zoho Implementation</option>
+            <option value="partner-solutions">Partner Solutions (EZ Payroll / VFD / Custom)</option>
+            <option value="training">Zoho Training</option>
+            <option value="finance-careers">Finance Careers Programme</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group full"><label for="message">Tell us about your project *</label><textarea id="message" name="message" required placeholder="Describe your business needs, current challenges, and what you're hoping to achieve..."></textarea></div>
+        <div class="form-group full"><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:16px">Send message</button></div>
+      </form>
+      <div id="form-success" style="display:none;padding:36px;background:rgba(70,148,49,0.06);border-radius:var(--radius-lg);text-align:center;margin-top:20px">
+        <div style="font-size:36px;margin-bottom:12px">&#10003;</div>
+        <h3>Message sent!</h3>
+        <p style="margin-top:8px">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+      </div>
+      <script>
+if(new URLSearchParams(location.search).get('sent')==='1'){
+  document.getElementById('contact-form').style.display='none';
+  document.getElementById('form-success').style.display='block';
+}
+</script>
+    </div>
+    <div>
+      <div style="background:var(--gray100);border-radius:var(--radius-lg);padding:0;overflow:hidden">
+        <img src="images/photos/africa-office.jpg" alt="Spiral Group office building" style="width:100%;height:200px;object-fit:cover;display:block">
+        <div style="padding:36px">
+        <h3>Our office</h3>
+        <div style="margin-top:16px;display:grid;gap:16px">
+          <div><div style="font-size:12px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:4px">Company</div><p style="font-size:15px;color:var(--text)">Spiral Group Limited</p></div>
+          <div><div style="font-size:12px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:4px">Location</div><p style="font-size:15px;color:var(--text);line-height:1.55">36 Mindu Malik Road<br>4th Floor, Hekima Point<br>Dar es Salaam, Tanzania</p></div>
+          <div><div style="font-size:12px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:4px">Email</div><a href="mailto:info@spiral.co.tz" style="font-size:15px;color:var(--blue);font-weight:500">info@spiral.co.tz</a></div>
+          <div><div style="font-size:12px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:4px">Phone</div><a href="tel:+255767778899" style="font-size:15px;color:var(--blue);font-weight:500">+255 767 778 899</a></div>
+          <div><div style="font-size:12px;color:var(--text-lighter);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:4px">Website</div><a href="https://spiral.co.tz" style="font-size:15px;color:var(--blue);font-weight:500">spiral.co.tz</a></div>
+        </div>
+        <div style="margin-top:24px;border-radius:12px;overflow:hidden;border:1px solid rgba(24,26,46,0.08)">
+          <iframe src="https://maps.google.com/maps?q=Spiral+Group+Limited+Dar+es+Salaam&hl=en&z=17&output=embed" width="100%" height="260" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Spiral Group office location"></iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/x9m6StbgJYShxivR6" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:600;color:var(--blue)">Open in Google Maps →</a>
+        </div>
+      </div>
+      <div style="margin-top:24px;padding:36px;border:1.5px solid var(--gray300);border-radius:var(--radius-lg)">
+        <h4>What happens next?</h4>
+        <div style="margin-top:16px;display:grid;gap:12px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:28px;height:28px;border-radius:50%;background:var(--gray200);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;color:var(--text-lighter)">1</div><p style="font-size:14px">We review your enquiry and respond within 24 hours</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:28px;height:28px;border-radius:50%;background:var(--gray200);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;color:var(--text-lighter)">2</div><p style="font-size:14px">We schedule a free 30-minute discovery call</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:28px;height:28px;border-radius:50%;background:var(--gray200);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;color:var(--text-lighter)">3</div><p style="font-size:14px">We prepare a tailored proposal with scope and pricing</p></div>
+        </div>
+      </div>
+      <div class="zoho-badge" style="margin-top:24px;width:100%;justify-content:center"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+// Close mobile menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empowering Finance Professionals — Zoho Training & Recruitment | Spiral Group</title>
+<meta name="description" content="Spiral Group's initiative to empower the next generation of finance professionals through Zoho certification training, CV collection, and job matching in Tanzania.">
+<meta name="keywords" content="Zoho partner Tanzania, Zoho Books, Zoho CRM, accounting software Dar es Salaam, tax advisory Tanzania, business registration Tanzania, Zoho implementation East Africa">
+<meta name="author" content="Spiral Group Limited">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rfftg.vercel.app/finance-careers.html">
+<meta property="og:title" content="Empowering Finance Professionals — Zoho Training & Recruitment | Spiral Group">
+<meta property="og:description" content="Spiral Group's initiative to empower the next generation of finance professionals through Zoho certification training, CV collection, and job matching in Tanzania.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rfftg.vercel.app/finance-careers.html">
+<meta property="og:site_name" content="Spiral Group Limited">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Empowering Finance Professionals — Zoho Training & Recruitment | Spiral Group">
+<meta name="twitter:description" content="Spiral Group's initiative to empower the next generation of finance professionals through Zoho certification training, CV collection, and job matching in Tanzania.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Spiral Group Limited", "url": "https://rfftg.vercel.app", "logo": "https://rfftg.vercel.app/images/brand/spiral-lockup-color.png", "description": "Authorized Zoho Partner in Tanzania specializing in accounting, tax advisory, Zoho implementation and business consulting.", "address": {"@type": "PostalAddress", "addressLocality": "Dar es Salaam", "addressCountry": "TZ"}, "sameAs": ["https://www.linkedin.com/company/spiralgrouplimited"]}</script>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions" class="active">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+<section class="section"><div class="container">
+  <a class="back-btn" href="index.html">Back to Home</a>
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Finance Careers</span></div>
+    <span class="badge badge-navy">Initiative</span>
+    <h1 style="margin-top:12px">Empowering the next generation of finance professionals</h1>
+    <p>We're building a bridge between talented finance professionals and the businesses that need them — powered by Zoho certification and practical skills training.</p>
+  </div>
+  <div class="two-col" style="margin-top:48px">
+    <div class="prose">
+      <h3>The vision</h3>
+      <p>Tanzania's growing economy needs skilled finance professionals who can operate modern cloud-based accounting systems. Yet most graduates enter the workforce with theoretical knowledge but no practical experience with tools like Zoho Books, Zoho CRM, or Zoho Analytics.</p>
+      <p>Spiral Group, in partnership with EPLS, is launching a comprehensive programme to close this gap — combining Zoho certification training with a recruitment platform that connects trained professionals with businesses seeking their expertise.</p>
+      <h3>What we're building</h3>
+      <div class="feature-list">
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>Zoho certification training</h4><p>Structured training programme delivered by EPLS-certified instructors covering Zoho Books, CRM, and the broader Zoho ecosystem.</p></div></div>
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>CV database &amp; candidate profiles</h4><p>A searchable database of trained and certified candidates, complete with skills profiles, certifications, and availability status.</p></div></div>
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>Job board for finance roles</h4><p>Listed opportunities from businesses across Tanzania seeking Zoho-skilled finance professionals — from bookkeepers to financial controllers.</p></div></div>
+        <div class="feature-item"><div class="feature-check">&#10003;</div><div><h4>Matching &amp; placement</h4><p>Active matching of candidates to roles based on skills, experience level, location, and business requirements.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="background:linear-gradient(135deg,var(--navy),#2a3568);border-radius:var(--radius-lg);padding:36px;color:#fff">
+        <h3 style="color:#fff">Training provided by</h3>
+        <p style="color:rgba(255,255,255,0.6);margin-top:8px;font-size:14px">Zoho certification training delivered by EPLS in partnership with Spiral Group.</p>
+        <div style="margin-top:20px;padding:16px;background:rgba(255,255,255,0.06);border-radius:12px;border:1px solid rgba(255,255,255,0.08)">
+          <div style="font-size:12px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;font-weight:700">Certification tracks</div>
+          <div style="margin-top:12px;display:grid;gap:8px">
+            <div style="padding:10px 16px;background:rgba(255,255,255,0.04);border-radius:8px;font-size:14px;color:rgba(255,255,255,0.7)">Zoho Books Certified User</div>
+            <div style="padding:10px 16px;background:rgba(255,255,255,0.04);border-radius:8px;font-size:14px;color:rgba(255,255,255,0.7)">Zoho CRM Certified Consultant</div>
+            <div style="padding:10px 16px;background:rgba(255,255,255,0.04);border-radius:8px;font-size:14px;color:rgba(255,255,255,0.7)">Zoho Analytics Specialist</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:24px;padding:36px;border:2px solid var(--crimson);border-radius:var(--radius-lg);text-align:center">
+        <h4 style="color:var(--crimson)">Recruitment platform launching soon</h4>
+        <p style="margin-top:8px;font-size:14px">Our dedicated recruitment website is currently in development. Register your interest to be notified at launch.</p>
+        <a href="contact.html" class="btn btn-crimson" style="margin-top:16px">Register interest</a>
+      </div>
+      <div style="margin-top:24px;padding:24px;background:var(--gray100);border-radius:var(--radius-lg)">
+        <h4>For employers</h4>
+        <p style="margin-top:8px;font-size:14px">Looking for Zoho-skilled finance talent? Contact us to discuss your hiring needs and access our growing pool of certified candidates.</p>
+        <a href="contact.html" style="display:inline-block;margin-top:12px;color:var(--blue);font-weight:700;font-size:14px">Hire trained talent &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+// Close mobile menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Systems Overhaul — Zoho Books Training & System Audit | Spiral Group</title>
+<meta name="description" content="Bespoke finance system revamps, system audits, internal controls checks, and batched Zoho Books training in classroom settings by Spiral Group.">
+<meta name="keywords" content="Zoho partner Tanzania, Zoho Books, Zoho CRM, accounting software Dar es Salaam, tax advisory Tanzania, business registration Tanzania, Zoho implementation East Africa">
+<meta name="author" content="Spiral Group Limited">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rfftg.vercel.app/finance-systems.html">
+<meta property="og:title" content="Finance Systems Overhaul — Zoho Books Training & System Audit | Spiral Group">
+<meta property="og:description" content="Bespoke finance system revamps, system audits, internal controls checks, and batched Zoho Books training in classroom settings by Spiral Group.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rfftg.vercel.app/finance-systems.html">
+<meta property="og:site_name" content="Spiral Group Limited">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Finance Systems Overhaul — Zoho Books Training & System Audit | Spiral Group">
+<meta name="twitter:description" content="Bespoke finance system revamps, system audits, internal controls checks, and batched Zoho Books training in classroom settings by Spiral Group.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Spiral Group Limited", "url": "https://rfftg.vercel.app", "logo": "https://rfftg.vercel.app/images/brand/spiral-lockup-color.png", "description": "Authorized Zoho Partner in Tanzania specializing in accounting, tax advisory, Zoho implementation and business consulting.", "address": {"@type": "PostalAddress", "addressLocality": "Dar es Salaam", "addressCountry": "TZ"}, "sameAs": ["https://www.linkedin.com/company/spiralgrouplimited"]}</script>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions" class="active">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+<section class="section"><div class="container">
+  <a class="back-btn" href="index.html">Back to Home</a>
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Finance Systems Overhaul</span></div>
+    <span class="badge badge-blue">Zoho powered</span>
+    <h1 style="margin-top:12px">Finance systems overhaul</h1>
+    <p>Modernize your financial infrastructure with bespoke system revamps, rigorous audits, and hands-on Zoho Books training.</p>
+  </div>
+  <div class="card-grid cols-3" style="margin-top:48px">
+    <div class="card" style="border-top:3px solid var(--crimson)">
+      <h3>Bespoke systems revamp</h3>
+      <p style="margin-top:8px">We audit your current accounting setup and redesign it from the ground up — chart of accounts restructuring, workflow automation, reporting dashboards, and Zoho configuration tailored to how you actually operate.</p>
+      <span class="badge badge-crimson" style="margin-top:16px">Custom build</span>
+    </div>
+    <div class="card" style="border-top:3px solid var(--blue)">
+      <h3>System audit &amp; controls check</h3>
+      <p style="margin-top:8px">Comprehensive review of your Zoho Books configuration, user access controls, approval workflows, and data integrity. We identify gaps and implement fixes to protect your financial data.</p>
+      <span class="badge badge-blue" style="margin-top:16px">Compliance</span>
+    </div>
+    <div class="card" style="border-top:3px solid var(--green)">
+      <h3>Batched Zoho Books training</h3>
+      <p style="margin-top:8px">Classroom-style training sessions for your finance team. We cover everything from daily transactions to advanced reporting, delivered in batches to minimize disruption to your operations.</p>
+      <span class="badge badge-green" style="margin-top:16px">Classroom</span>
+    </div>
+  </div>
+  <div style="margin-top:48px;background:var(--gray100);border-radius:var(--radius-lg);padding:48px">
+    <h2>Training curriculum</h2>
+    <p class="section-desc">Our Zoho Books training programme is structured across multiple sessions, designed for finance professionals at all levels.</p>
+    <div class="card-grid cols-4" style="margin-top:28px">
+      <div class="card"><h4>Module 1</h4><p style="margin-top:6px;font-size:13px">Zoho Books fundamentals — setup, chart of accounts, contacts, items</p></div>
+      <div class="card"><h4>Module 2</h4><p style="margin-top:6px;font-size:13px">Day-to-day transactions — invoicing, bills, payments, bank feeds</p></div>
+      <div class="card"><h4>Module 3</h4><p style="margin-top:6px;font-size:13px">Advanced features — recurring transactions, journal entries, multi-currency</p></div>
+      <div class="card"><h4>Module 4</h4><p style="margin-top:6px;font-size:13px">Reporting &amp; analytics — custom reports, dashboards, tax reports, TRA filing</p></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:48px">
+    <a href="contact.html" class="btn btn-primary" style="font-size:15px;padding:16px 40px">Enquire about training</a>
+  </div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+// Close mobile menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spiral Group Limited — Authorized Zoho Partner | Tanzania</title>
+<meta name="description" content="Spiral Group is Tanzania's authorized Zoho partner offering accounting, tax advisory, Zoho implementation, business registration, and IT consulting in Dar es Salaam.">
+<meta name="keywords" content="Zoho partner Tanzania, Zoho Books, Zoho CRM, accounting software Dar es Salaam, tax advisory Tanzania, business registration Tanzania, Zoho implementation East Africa">
+<meta name="author" content="Spiral Group Limited">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rfftg.vercel.app/">
+<meta property="og:title" content="Spiral Group Limited — Authorized Zoho Partner | Tanzania">
+<meta property="og:description" content="Spiral Group is Tanzania's authorized Zoho partner offering accounting, tax advisory, Zoho implementation, business registration, and IT consulting in Dar es Salaam.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rfftg.vercel.app/">
+<meta property="og:site_name" content="Spiral Group Limited">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spiral Group Limited — Authorized Zoho Partner | Tanzania">
+<meta name="twitter:description" content="Spiral Group is Tanzania's authorized Zoho partner offering accounting, tax advisory, Zoho implementation, business registration, and IT consulting in Dar es Salaam.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Spiral Group Limited", "url": "https://rfftg.vercel.app", "logo": "https://rfftg.vercel.app/images/brand/spiral-lockup-color.png", "description": "Authorized Zoho Partner in Tanzania specializing in accounting, tax advisory, Zoho implementation and business consulting.", "address": {"@type": "PostalAddress", "addressLocality": "Dar es Salaam", "addressCountry": "TZ"}, "sameAs": ["https://www.linkedin.com/company/spiralgrouplimited"]}</script>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+<section class="hero">
+  <div>
+    <h1>Your business deserves <span class="gradient-text">smarter systems</span></h1>
+    <p>Spiral Group is Tanzania's trusted Zoho partner. We implement cloud-based business tools that automate your accounting, streamline your sales, and give you real-time visibility into operations.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-primary">Start your project</a>
+      <a href="index.html#solutions" class="btn btn-secondary">Our solutions</a>
+    </div>
+    <div class="zoho-badge" style="margin-top:28px" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <img class="hero-photo" src="images/photos/africa-team-1.jpg" alt="Spiral Group consultants in a client working session">
+    <div class="float-card" style="top:28px;left:28px;display:flex;align-items:center;gap:14px">
+      <div class="fc-icon blue">Z</div>
+      <div><div class="fc-label">Zoho Books</div><div class="fc-value" style="color:var(--blue)">Live</div></div>
+    </div>
+    <div class="float-card" style="bottom:28px;right:28px">
+      <div class="fc-label">Automation rate</div>
+      <div class="fc-value" style="color:var(--green)">87%</div>
+      <div style="height:6px;background:rgba(70,148,49,0.12);border-radius:4px;margin-top:10px;width:150px"><div style="height:100%;width:87%;background:var(--green);border-radius:4px"></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="num gradient-text">30+</div><div class="label">Years collective experience</div></div>
+  <div class="stat"><div class="num gradient-text">150+</div><div class="label">Zoho implementations</div></div>
+  <div class="stat"><div class="num gradient-text">100%</div><div class="label">Certified consultants</div></div>
+  <div class="stat"><div class="num gradient-text">7</div><div class="label">Industries served</div></div>
+</div>
+
+<section id="solutions" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our core business lines</h2>
+      <p class="section-desc">Integrated services spanning financial advisory, Zoho technology, and strategic partnerships.</p>
+    </div>
+    <div class="card-grid cols-2">
+      <a href="accounting.html" class="card" style="border-left:3px solid var(--crimson)">
+        <div class="card-icon fc-icon red">A</div>
+        <div class="arrow">&rarr;</div>
+        <h3>Accounting &amp; Financial Consultancy</h3>
+        <p>Comprehensive accounting services, review &amp; audit support, and strategic financial advisory for businesses across Tanzania.</p>
+        <span class="badge badge-crimson" style="margin-top:14px">Core service</span>
+      </a>
+      <a href="finance-systems.html" class="card" style="border-left:3px solid var(--blue)">
+        <div class="card-icon fc-icon blue">F</div>
+        <div class="arrow">&rarr;</div>
+        <h3>Finance systems overhaul</h3>
+        <p>Bespoke systems revamp, system audit &amp; controls check, and batched Zoho Books training in a classroom setting.</p>
+        <span class="badge badge-blue" style="margin-top:14px">Zoho powered</span>
+      </a>
+      <a href="partner-solutions.html" class="card" style="border-left:3px solid var(--green)">
+        <div class="card-icon fc-icon green">P</div>
+        <div class="arrow">&rarr;</div>
+        <h3>Custom Zoho solutions</h3>
+        <p>Custom Zoho solutions in collaboration with leading Zoho partners in Tanzania.</p>
+        <span class="badge badge-green" style="margin-top:14px">Partner network</span>
+      </a>
+      <a href="finance-careers.html" class="card" style="border-left:3px solid var(--mid)">
+        <div class="card-icon fc-icon navy">E</div>
+        <div class="arrow">&rarr;</div>
+        <h3>Empowering finance professionals</h3>
+        <p>Zoho certification training, CV collection, candidate listing, and job matching for the next generation of finance talent.</p>
+        <span class="badge badge-navy" style="margin-top:14px">Coming soon</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding:0">
+  <div class="container">
+    <div class="approach-wrap" id="approach">
+      <h2>How we work</h2>
+      <div class="timeline">
+        <div class="tl"><div class="step-label">Step 1</div><h4>Audit &amp; discover</h4><p>We map your current processes and identify where Zoho creates the most value for your business.</p></div>
+        <div class="tl"><div class="step-label">Step 2</div><h4>Architect &amp; design</h4><p>Detailed solution design with data models, integration maps, and phased rollout plans.</p></div>
+        <div class="tl"><div class="step-label">Step 3</div><h4>Build &amp; migrate</h4><p>Configuration, customization, data migration, third-party integrations, and thorough testing.</p></div>
+        <div class="tl"><div class="step-label">Step 4</div><h4>Train &amp; support</h4><p>Hands-on training for your team with dedicated ongoing post-launch support and optimization.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light" id="about" data-screen-label="About">
+  <div class="container">
+    <div class="two-col" style="gap:64px;align-items:center">
+      <div>
+        <span class="badge badge-crimson">About Spiral Group</span>
+        <h2 style="margin-top:14px">A Tanzanian business consultancy with 30+ years inside the numbers.</h2>
+        <p style="margin-top:18px;font-size:16px">Spiral Group Limited is a Dar es Salaam-based business consultancy and authorized Zoho partner. Led by chartered accountants and Zoho-certified consultants, we have spent careers inside Tanzanian businesses — from fuel-station groups to hospitality brands, manufacturers to consultancies.</p>
+        <p style="margin-top:14px;font-size:16px">We stay small on purpose. The partner you meet on day one is the partner who shows up on the long term. Our work blends classical accounting practice with modern cloud finance systems, and the result is operational clarity that scales without breaking.</p>
+        <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap">
+          <a href="#approach" class="btn btn-primary">How we work</a>
+        </div>
+      </div>
+      <div>
+        <img src="images/photos/africa-team-2.jpg" alt="The Spiral Group team in a strategy session" style="width:100%;height:100%;min-height:380px;object-fit:cover;border-radius:var(--radius-xl);box-shadow:var(--shadow-lg)">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Industries we serve</h2>
+      <p class="section-desc">Tailored Zoho solutions for the sectors driving East Africa's economy.</p>
+    </div>
+    <div class="tags-wrap">
+      <a href="industries/manufacturing.html" class="tag tag-manufacturing">Manufacturing</a>
+      <a href="industries/retail.html" class="tag tag-retail">Retail &amp; trade</a>
+      <a href="industries/hospitality.html" class="tag tag-hospitality">Hospitality &amp; tourism</a>
+      <a href="industries/professional-services.html" class="tag tag-professional">Professional services</a>
+      <a href="industries/fuel.html" class="tag tag-fuel">Fuel stations</a>
+      <a href="industries/transport.html" class="tag tag-transport">Transport &amp; logistics</a>
+      <a href="industries/real-estate.html" class="tag tag-realestate">Real estate</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding:0 0 60px">
+  <div class="container">
+    <div class="testimonial">
+      <div class="test-mark" aria-hidden="true">&ldquo;</div>
+      <div>
+        <div class="test-text">Spiral Group transformed our entire accounting operation. What used to take our team a lot of manual steps now happens automatically in Zoho Books. They understood our business from day one.</div>
+        <div class="test-cite">— Managing Director, Dar es Salaam manufacturing firm</div>
+      </div>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-card-mark" aria-hidden="true">&ldquo;</div>
+        <div class="test-card-text">The experience with Spiral Group has been very seamless. They have taken utmost care of our needs and have pushed our operational efficiency manyfold.</div>
+        <div class="test-card-cite">— Managing Director, DSM Retail Chain</div>
+      </div>
+      <div class="test-card">
+        <div class="test-card-mark" aria-hidden="true">&ldquo;</div>
+        <div class="test-card-text">I would like to highly recommend Spiral Group for their good work and professionalism. The system, approach and attention to detail was spot on. They know what to do and are very good at it.</div>
+        <div class="test-card-cite">— CFO, Arusha Company</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" style="background:linear-gradient(135deg,var(--navy),#2a3568)">
+  <h2 style="color:#fff">Let's build <span class="gradient-text">something great</span></h2>
+  <p style="color:rgba(255,255,255,0.6)">Book a free consultation to explore how Zoho can transform your business.</p>
+  <a href="contact.html" class="btn btn-crimson" style="font-size:15px;padding:16px 40px">Book your free consultation</a>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+// Close mobile menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industries We Serve — Zoho Solutions by Sector | Spiral Group</title>
+<meta name="description" content="Spiral Group delivers tailored Zoho solutions across manufacturing, retail, hospitality, professional services, fuel, transport, and real estate in Tanzania.">
+<meta name="keywords" content="Zoho partner Tanzania, Zoho Books, Zoho CRM, accounting software Dar es Salaam, tax advisory Tanzania, business registration Tanzania, Zoho implementation East Africa">
+<meta name="author" content="Spiral Group Limited">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rfftg.vercel.app/industries.html">
+<meta property="og:title" content="Industries We Serve — Zoho Solutions by Sector | Spiral Group">
+<meta property="og:description" content="Spiral Group delivers tailored Zoho solutions across manufacturing, retail, hospitality, professional services, fuel, transport, and real estate in Tanzania.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rfftg.vercel.app/industries.html">
+<meta property="og:site_name" content="Spiral Group Limited">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Industries We Serve — Zoho Solutions by Sector | Spiral Group">
+<meta name="twitter:description" content="Spiral Group delivers tailored Zoho solutions across manufacturing, retail, hospitality, professional services, fuel, transport, and real estate in Tanzania.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Spiral Group Limited", "url": "https://rfftg.vercel.app", "logo": "https://rfftg.vercel.app/images/brand/spiral-lockup-color.png", "description": "Authorized Zoho Partner in Tanzania specializing in accounting, tax advisory, Zoho implementation and business consulting.", "address": {"@type": "PostalAddress", "addressLocality": "Dar es Salaam", "addressCountry": "TZ"}, "sameAs": ["https://www.linkedin.com/company/spiralgrouplimited"]}</script>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html" class="active">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+<section class="section"><div class="container">
+  <a class="back-btn" href="index.html">Back to Home</a>
+  <div class="page-header">
+    <h1>Industries we serve</h1>
+    <p>Every sector has unique challenges. We configure Zoho to solve yours — with deep domain knowledge across seven key industries in Tanzania.</p>
+  </div>
+  <div class="card-grid cols-3" style="margin-top:36px">
+    <a href="industries/manufacturing.html" class="card"><div class="card-icon fc-icon red">M</div><div class="arrow">&rarr;</div><h3>Manufacturing</h3><p>Production tracking, inventory management, supply chain automation, and quality control systems.</p></a>
+    <a href="industries/retail.html" class="card"><div class="card-icon fc-icon blue">R</div><div class="arrow">&rarr;</div><h3>Retail &amp; trade</h3><p>POS integration, multi-warehouse management, customer loyalty, and omnichannel sales.</p></a>
+    <a href="industries/hospitality.html" class="card"><div class="card-icon fc-icon green">H</div><div class="arrow">&rarr;</div><h3>Hospitality &amp; tourism</h3><p>Booking management, guest CRM, revenue management, and property operations.</p></a>
+    <a href="industries/professional-services.html" class="card"><div class="card-icon fc-icon navy">P</div><div class="arrow">&rarr;</div><h3>Professional services</h3><p>Project billing, time tracking, client management, and resource allocation.</p></a>
+    <a href="industries/fuel.html" class="card"><div class="card-icon fc-icon red">F</div><div class="arrow">&rarr;</div><h3>Fuel stations</h3><p>Forecourt management, shift tracking, LPO processing, and supplier integration.</p></a>
+    <a href="industries/transport.html" class="card"><div class="card-icon fc-icon blue">T</div><div class="arrow">&rarr;</div><h3>Transport &amp; logistics</h3><p>Fleet management, route optimization, warehouse operations, and client portals.</p></a>
+    <a href="industries/real-estate.html" class="card"><div class="card-icon fc-icon green">E</div><div class="arrow">&rarr;</div><h3>Real estate</h3><p>Property management, tenant CRM, lease tracking, and maintenance scheduling.</p></a>
+  </div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+// Close mobile menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Zoho Solutions in Partnership with Leading Zoho Partners | Spiral Group</title>
+<meta name="description" content="Integrated technology solutions from Spiral Group's trusted partners including EZ Payroll, VFD for Zoho Books by EPLS Cloud, and custom software by EZ Digital Solutions.">
+<meta name="keywords" content="Zoho partner Tanzania, Zoho Books, Zoho CRM, accounting software Dar es Salaam, tax advisory Tanzania, business registration Tanzania, Zoho implementation East Africa">
+<meta name="author" content="Spiral Group Limited">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rfftg.vercel.app/partner-solutions.html">
+<meta property="og:title" content="Custom Zoho Solutions in Partnership with Leading Zoho Partners | Spiral Group">
+<meta property="og:description" content="Integrated technology solutions from Spiral Group's trusted partners including EZ Payroll, VFD for Zoho Books by EPLS Cloud, and custom software by EZ Digital Solutions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rfftg.vercel.app/partner-solutions.html">
+<meta property="og:site_name" content="Spiral Group Limited">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custom Zoho Solutions in Partnership with Leading Zoho Partners | Spiral Group">
+<meta name="twitter:description" content="Integrated technology solutions from Spiral Group's trusted partners including EZ Payroll, VFD for Zoho Books by EPLS Cloud, and custom software by EZ Digital Solutions.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Spiral Group Limited", "url": "https://rfftg.vercel.app", "logo": "https://rfftg.vercel.app/images/brand/spiral-lockup-color.png", "description": "Authorized Zoho Partner in Tanzania specializing in accounting, tax advisory, Zoho implementation and business consulting.", "address": {"@type": "PostalAddress", "addressLocality": "Dar es Salaam", "addressCountry": "TZ"}, "sameAs": ["https://www.linkedin.com/company/spiralgrouplimited"]}</script>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions" class="active">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+<section class="section"><div class="container">
+  <a class="back-btn" href="index.html">Back to Home</a>
+  <div class="page-header">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Partner Solutions</span></div>
+    <span class="badge badge-green">Partner network</span>
+    <h1 style="margin-top:12px">Custom Zoho solutions in partnership with leading Zoho partners</h1>
+    <p>We collaborate with specialised Zoho partners across Tanzania to extend the platform beyond out-of-the-box capabilities — from payroll and tax compliance to bespoke software builds.</p>
+  </div>
+  <div class="card-grid cols-3" style="margin-top:48px">
+    <a href="partner-solutions/ez-payroll.html" class="partner-card">
+      <span class="badge badge-blue">EZ Digital Solutions</span>
+      <h3 style="margin-top:16px">EZ Payroll</h3>
+      <p style="margin-top:8px">Complete payroll management system for Tanzanian businesses. TRA-compliant, handles PAYE, NSSF, and all statutory deductions automatically.</p>
+      <span style="display:inline-block;margin-top:16px;color:var(--blue);font-weight:700;font-size:14px;white-space:nowrap">Learn more &rarr;</span>
+    </a>
+    <a href="partner-solutions/custom-software.html" class="partner-card">
+      <span class="badge badge-crimson">EZ Digital Solutions</span>
+      <h3 style="margin-top:16px">Custom software development</h3>
+      <p style="margin-top:8px">Fully bespoke software solutions for requirements that go beyond off-the-shelf products. Web apps, mobile apps, and system integrations.</p>
+      <span style="display:inline-block;margin-top:16px;color:var(--crimson);font-weight:700;font-size:14px;white-space:nowrap">Learn more &rarr;</span>
+    </a>
+    <a href="partner-solutions/vfd-zoho.html" class="partner-card">
+      <span class="badge badge-green">EPLS Cloud Solutions</span>
+      <h3 style="margin-top:16px">VFD for Zoho Books</h3>
+      <p style="margin-top:8px">Virtual Fiscal Device integration for Zoho Books. Automatic VFD receipt generation compliant with TRA requirements for every invoice.</p>
+      <span style="display:inline-block;margin-top:16px;color:var(--green);font-weight:700;font-size:14px;white-space:nowrap">Learn more &rarr;</span>
+    </a>
+  </div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+// Close mobile menu on link click
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spiral Academy — Tanzania's First Certified Zoho Academy | Spiral Group</title>
+<meta name="description" content="Spiral Academy is Tanzania's first certified Zoho academy. Official Zoho certification, state-of-the-art facilities, and trainers with 30+ years combined accounting experience.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/brand/spiral-mark-red.png">
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Spiral Group Limited Home"><img src="images/brand/spiral-lockup-color.png" alt="Spiral Group Limited — Business Consultancy"></a>
+  <div class="nav-links"><a href="index.html#about">About</a>
+<a href="index.html#solutions">Solutions</a>
+<a href="index.html#approach">Our approach</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html" class="nav-cta">Let's talk</a></div>
+  <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+  <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+<main>
+
+<section class="academy-hero">
+  <div>
+    <img src="images/brand/spiral-academy-logo.png" alt="Spiral Academy" class="academy-logo">
+    <h1>Tanzania's first <span class="gradient-text">certified Zoho academy</span></h1>
+    <p class="lead">Our courses are built to upskill professionals to excel in their roles — combining official Zoho certification with the practical judgement that comes from three decades in the accounting field.</p>
+    <div class="hero-btns">
+      <a href="academy-register.html" class="btn btn-primary">Sign up now</a>
+      <a href="#features" class="btn btn-secondary">Why Spiral Academy</a>
+    </div>
+    <div class="academy-badges">
+      <img class="partner" src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner">
+      <div class="books"><img src="images/zoho/books.png" alt="Zoho Books"> Zoho Books certified training</div>    </div>
+  </div>
+  <div class="carousel" id="academyCarousel">
+    <div class="carousel-track">
+      <div class="carousel-slide active"><img src="images/photos/academy-classroom.jpg" alt="The Spiral Academy training room at Hekima Point"><div class="carousel-caption">Our training room — Hekima Point, Dar es Salaam</div></div>
+      <div class="carousel-slide"><img src="images/photos/academy-training-a.jpg" alt="Professionals working through a Zoho exercise together"><div class="carousel-caption">Hands-on sessions on live Zoho environments</div></div>
+      <div class="carousel-slide"><img src="images/photos/africa-team-1.jpg" alt="Finance professionals in a Spiral Academy workshop"><div class="carousel-caption">Small cohorts, led by certified trainers</div></div>
+    </div>
+    <button class="carousel-nav prev" aria-label="Previous image">&#8249;</button>
+    <button class="carousel-nav next" aria-label="Next image">&#8250;</button>
+    <div class="carousel-dots" role="tablist" aria-label="Carousel navigation"></div>
+  </div>
+</section>
+
+<section class="section" id="features" style="padding-top:0">
+  <div class="container">
+    <div class="section-header">
+      <h2 style="font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.12">What sets the academy apart</h2>
+      <p class="section-desc">Four things every cohort gets, from day one to certification.</p>
+    </div>
+    <div class="academy-features">
+      <div class="af-card" style="--accent:var(--crimson);--accent-soft:rgba(192,65,76,0.09)">
+        <div class="af-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"></path></svg></div>
+        <div class="af-num">01</div>
+        <h3>Official Zoho certification</h3>
+        <p>Certification issued through the Zoho programme itself. A credential recognised by employers across the region, not an internal certificate.</p>
+      </div>
+      <div class="af-card" style="--accent:var(--blue);--accent-soft:rgba(34,110,181,0.09)">
+        <div class="af-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
+        <div class="af-num">02</div>
+        <h3>Purpose built facilities</h3>
+        <p>A purpose built training room with projection, individual workstations, and live Zoho environments so every exercise runs on real systems.</p>
+      </div>
+      <div class="af-card" style="--accent:var(--green);--accent-soft:rgba(70,148,49,0.09)">
+        <div class="af-icon"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5Z"></path><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"></path></svg></div>
+        <div class="af-num">03</div>
+        <h3>Zoho certified trainers</h3>
+        <p>Every trainer is Zoho certified and brings more than 30 years combined experience in the accounting field, so the teaching stays grounded in practice.</p>
+      </div>
+      <div class="af-card" style="--accent:var(--mid);--accent-soft:rgba(74,92,141,0.1)">
+        <div class="af-icon"><svg viewBox="0 0 24 24"><path d="M3 17 9 11l4 4 8-8"></path><path d="M15 7h6v6"></path></svg></div>
+        <div class="af-num">04</div>
+        <h3>Pathway to opportunities</h3>
+        <p>Graduates enter our candidate pool and are matched with Tanzanian businesses actively hiring finance professionals with Zoho skills.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="register" style="padding-top:0">
+  <div class="container">
+    <div class="academy-banner">
+      <div>
+        <h2>Cohorts open for registration</h2>
+        <p>Places are limited so each group stays small enough for individual attention. Register your interest and we'll be in touch with dates, syllabus, and fees for the next intake.</p>
+      </div>
+      <div class="academy-banner-stats">
+        <div class="abs-item"><div class="n">30+</div><div class="l">Years trainer experience</div></div>
+        <div class="abs-item"><div class="n">1st</div><div class="l">Certified Zoho academy in TZ</div></div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3 style="font-size:clamp(1.5rem,2.6vw,2rem);margin-bottom:12px">Sign Up Now</h3>
+        <p style="margin-bottom:22px">Registration takes two minutes. Tell us who you are and which course you want, then choose how you would like to pay.</p>
+        <a href="academy-register.html" class="btn btn-primary" style="font-size:15px;padding:16px 32px">Go to registration &rarr;</a>
+      </div>
+      <div>
+        <div style="padding:32px;background:var(--gray100);border-radius:var(--radius-lg)">
+          <h3>Upcoming course</h3>
+          <div style="margin-top:18px;display:grid;gap:14px">
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(192,65,76,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--crimson);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l3 1.5"></path></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Start date</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">14th September</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(74,92,141,0.1)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--mid);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M4 12h16"></path><path d="M4 8v8M20 8v8"></path></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Course duration</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">2 weeks</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(192,65,76,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--crimson);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Dates</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">Monday, Wednesday, Friday</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(34,110,181,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--blue);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Timing</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">9am &ndash; 11am</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(70,148,49,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--green);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Location</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">4th Floor Hekima Point, Mindu Street</div></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:24px;padding:32px;border:2px solid var(--crimson);border-radius:var(--radius-lg)">
+          <h4 style="color:var(--crimson)">Training for your whole team?</h4>
+          <p style="margin-top:8px;font-size:14px">We run private cohorts for organisations that want their finance team certified together, delivered at our facility or yours.</p>
+          <a href="contact.html" class="btn btn-crimson" style="margin-top:16px">Discuss a private cohort</a>
+        </div>
+        <div style="margin-top:24px;padding:24px;background:var(--gray100);border-radius:var(--radius-lg)">
+          <h4>Where we are</h4>
+          <p style="margin-top:8px;font-size:14px">36 Mindu Malik Road, 4th Floor, Hekima Point, Dar es Salaam.</p>
+          <a href="contact.html" style="display:inline-block;margin-top:12px;color:var(--blue);font-weight:700;font-size:14px">Get directions &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/brand/spiral-lockup-white.png" alt="Spiral Group Limited" class="footer-logo">
+        <p>Business consultancy &amp; authorized Zoho partner based in Dar es Salaam, Tanzania. Over 30 years of collective experience in accounting, tax advisory, and IT consulting.</p>
+        <div class="zoho-badge-mark" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="accounting.html">Accounting & Audit</a>
+        <a href="finance-systems.html">Finance Systems</a>
+        <a href="partner-solutions.html">Partner Solutions</a>
+        <a href="finance-careers.html">Finance Careers</a>
+        <a href="spiral-academy.html">Spiral Academy</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="industries/manufacturing.html">Manufacturing</a>
+        <a href="industries/retail.html">Retail & Trade</a>
+        <a href="industries/hospitality.html">Hospitality</a>
+        <a href="industries/fuel.html">Fuel Stations</a>
+        <a href="industries/transport.html">Transport</a>
+        <a href="industries/real-estate.html">Real Estate</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@spiral.co.tz">info@spiral.co.tz</a>
+        <a href="tel:+255767778899">+255 767 778 899</a>
+        <a href="https://spiral.co.tz">spiral.co.tz</a>
+        <a href="https://www.linkedin.com/company/spiralgrouplimited" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Spiral Group Limited &bull; Dar es Salaam, Tanzania</div>
+      <div>Authorized Zoho Partner &bull; Business Consultancy</div>
+    </div>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.remove('open');
+}));
+// Carousel
+(function(){
+  const root = document.getElementById('academyCarousel');
+  const slides = [...root.querySelectorAll('.carousel-slide')];
+  const dotWrap = root.querySelector('.carousel-dots');
+  let i = 0, timer;
+  slides.forEach((_, n) => {
+    const b = document.createElement('button');
+    b.className = 'carousel-dot' + (n === 0 ? ' active' : '');
+    b.setAttribute('aria-label', 'Go to image ' + (n + 1));
+    b.addEventListener('click', () => { go(n); reset(); });
+    dotWrap.appendChild(b);
+  });
+  const dots = [...dotWrap.children];
+  function go(n){
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle('active', k === i));
+    dots.forEach((d, k) => d.classList.toggle('active', k === i));
+  }
+  function reset(){ clearInterval(timer); timer = setInterval(() => go(i + 1), 5500); }
+  root.querySelector('.prev').addEventListener('click', () => { go(i - 1); reset(); });
+  root.querySelector('.next').addEventListener('click', () => { go(i + 1); reset(); });
+  reset();
+})();
+</script>
+</body>
+</html>
+
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}
