@@ -16,6 +16,7 @@
 <a href="index.html#solutions">Solutions</a>
 <a href="index.html#approach">Our approach</a>
 <a href="industries.html">Industries</a>
+<a href="spiral-academy.html" class="nav-academy">Spiral Academy <span class="tag-new">New</span></a>
 <a href="contact.html" class="nav-cta">Let's talk</a></div>
   <div class="nav-partner" aria-label="Zoho Authorized Partner"><img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner"></div>
   <div class="nav-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open');this.classList.toggle('active')" aria-label="Toggle menu">
@@ -24,7 +25,8 @@
 </nav>
 <div id="mobile-menu" class="mobile-menu">
   <a href="index.html">Home</a>
-  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="contact.html" class="nav-cta">Let's talk</a>
+  <a href="index.html#about">About</a><a href="index.html#solutions">Solutions</a><a href="index.html#approach">Our approach</a><a href="industries.html">Industries</a>  <a href="spiral-academy.html" class="nav-academy">Spiral Academy <span class="tag-new">New</span></a>
+  <a href="contact.html" class="nav-cta">Let's talk</a>
 </div>
 <main>
 
@@ -45,7 +47,7 @@
           <input type="hidden" name="_subject" value="New Spiral Academy registration">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_next" value="https://spiral.co.tz/academy-register.html?sent=1">
+          <input type="hidden" name="_next" value="https://spiral.co.tz/academy-confirmation.html">
           <div class="form-group"><label for="ac-name">Full name *</label><input type="text" id="ac-name" name="name" required placeholder="Muhammad Ali"></div>
           <div class="form-group"><label for="ac-company">Company name</label><input type="text" id="ac-company" name="company" placeholder="ABC Limited"></div>
           <div class="form-group"><label for="ac-email">Email address *</label><input type="email" id="ac-email" name="email" required placeholder="muhammad@acme.co.tz"></div>
@@ -59,43 +61,9 @@
             </select>
           </div>
           <div class="form-group full"><label for="ac-message">Anything else we should know?</label><textarea id="ac-message" name="message" placeholder="Your current role, experience level, or what you're hoping to get out of the course."></textarea></div>
-          <input type="hidden" name="payment_method" id="ac-payment-method" value="">
           <div class="form-group full"><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:16px">Complete my registration</button></div>
         </form>
 
-        <div id="academy-payment" style="display:none">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
-            <button type="button" id="pay-back" style="border:0;background:transparent;padding:0;cursor:pointer;font:inherit;font-size:13.5px;font-weight:700;color:var(--blue)">&larr; Edit details</button>
-            <span style="font-size:13.5px;color:var(--text-lighter)">Step 2 of 2</span>
-          </div>
-          <h3 style="font-size:clamp(1.5rem,2.6vw,2rem)">Payment</h3>
-          <p style="margin-top:8px;margin-bottom:22px">Your place is held once payment is received.</p>
-
-          <div style="padding:24px;background:var(--gray100);border-radius:var(--radius-lg);margin-bottom:24px">
-            <div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Your registration</div>
-            <div style="display:grid;gap:10px;margin-top:14px">
-              <div style="display:flex;justify-content:space-between;gap:16px;font-size:14.5px"><span style="color:var(--text-light)">Name</span><span style="font-weight:700;text-align:right" id="sum-name">&mdash;</span></div>
-              <div style="display:flex;justify-content:space-between;gap:16px;font-size:14.5px"><span style="color:var(--text-light)">Course</span><span style="font-weight:700;text-align:right" id="sum-course">&mdash;</span></div>
-              <div style="display:flex;justify-content:space-between;gap:16px;font-size:14.5px"><span style="color:var(--text-light)">Starts</span><span style="font-weight:700;text-align:right">14th September &bull; 2 weeks</span></div>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;padding-top:18px;border-top:1px solid var(--gray300)">
-              <span style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Course fee</span>
-              <span style="font-size:1.5rem;font-weight:800;color:var(--crimson)">TZS [amount]</span>
-            </div>
-          </div>
-
-          <div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter);margin-bottom:12px">Payment method</div>
-          <div id="pay-methods" style="display:grid;gap:12px">
-            <label class="pay-option"><input type="radio" name="paymethod" value="Mobile money (Selcom)" checked><span><span class="po-title">Mobile money &mdash; Selcom</span><span class="po-note">Lipa namba [number] &bull; Registered name [name]</span></span></label>
-          </div>
-
-          <button type="button" id="pay-confirm" class="btn btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:16px;margin-top:24px">Confirm registration</button>
-        </div>
-        <div id="academy-success" style="display:none;padding:36px;background:rgba(70,148,49,0.06);border-radius:var(--radius-lg);text-align:center;margin-top:20px">
-          <div style="font-size:36px;margin-bottom:12px">&#10003;</div>
-          <h3>Registration received</h3>
-          <p style="margin-top:8px">Thank you &mdash; a confirmation email is on its way with your payment details and joining instructions.</p>
-        </div>
       </div>
       <div>
         <div style="padding:32px;background:var(--gray100);border-radius:var(--radius-lg)">
@@ -103,7 +71,7 @@
           <div style="margin-top:18px;display:grid;gap:14px">
             <div style="display:flex;gap:14px;align-items:flex-start">
               <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(192,65,76,0.09)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--crimson);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l3 1.5"></path></svg></div>
-              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Start date</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">14th September</div></div>
+              <div><div style="font-size:11.5px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:var(--text-lighter)">Start date</div><div style="font-size:14.5px;font-weight:700;margin-top:3px">28th September</div></div>
             </div>
             <div style="display:flex;gap:14px;align-items:flex-start">
               <div class="af-icon" style="width:38px;height:38px;border-radius:10px;margin:0;flex-shrink:0;background:rgba(74,92,141,0.1)"><svg viewBox="0 0 24 24" style="width:19px;height:19px;stroke:var(--mid);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round"><path d="M4 12h16"></path><path d="M4 8v8M20 8v8"></path></svg></div>
@@ -125,7 +93,6 @@
         </div>
         <div style="margin-top:24px;padding:24px;background:var(--gray100);border-radius:var(--radius-lg);display:flex;align-items:center;gap:16px;flex-wrap:wrap">
           <img src="images/brand/zoho-authorized-partner-badge.png" alt="Zoho Authorized Partner" style="height:46px;width:auto">
-          <div style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700"><img src="images/zoho/books.png" alt="Zoho Books" style="height:26px;width:auto"> Zoho Books certified training</div>
         </div>
         <div style="margin-top:24px;padding:24px;background:var(--gray100);border-radius:var(--radius-lg)">
           <h4>About the academy</h4>
@@ -181,35 +148,18 @@
 document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', () => {
   document.getElementById('mobile-menu').classList.remove('open');
 }));
-if(new URLSearchParams(location.search).get('sent')==='1'){
-  document.getElementById('academy-form').style.display='none';
-  document.getElementById('academy-payment').style.display='none';
-  document.getElementById('academy-success').style.display='block';
-}
-// Two-step registration: details -> payment
+// Point the FormSubmit redirect at this site's own confirmation page, whatever the domain
+document.querySelectorAll('input[name="_next"]').forEach(el => {
+  el.value = new URL('academy-confirmation.html', location.href).href;
+});
+// Prefill from the quick signup on the Academy page
 (function(){
-  const form = document.getElementById('academy-form');
-  const pay = document.getElementById('academy-payment');
-  if(!form || !pay) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    if(!form.reportValidity()) return;
-    document.getElementById('sum-name').textContent = form.name.value || '—';
-    document.getElementById('sum-course').textContent = form.course.value || 'To be advised';
-    form.style.display = 'none';
-    pay.style.display = 'block';
-    window.scrollTo({ top: pay.getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' });
-  });
-  document.getElementById('pay-back').addEventListener('click', () => {
-    pay.style.display = 'none';
-    form.style.display = '';
-    window.scrollTo({ top: form.getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' });
-  });
-  document.getElementById('pay-confirm').addEventListener('click', () => {
-    const picked = pay.querySelector('input[name="paymethod"]:checked');
-    document.getElementById('ac-payment-method').value = picked ? picked.value : '';
-    form.submit();
-  });
+  const p = new URLSearchParams(location.search);
+  const set = (id, v) => { const el = document.getElementById(id); if(el && v) el.value = v; };
+  set('ac-name', p.get('name'));
+  set('ac-email', p.get('email'));
+  set('ac-phone', p.get('phone'));
+  set('ac-course', p.get('course'));
 })();
 </script>
 </body>
